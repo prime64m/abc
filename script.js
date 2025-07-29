@@ -1,11 +1,30 @@
-// Fixed responses for specific names
 const fixedResponses = {
-    alex: { count: 69, comment: "Nice... very nice indeed", emoji: "😏" },
+    alok: { count: 0, comment: "Nice... very nice indeed", emoji: "😏" },
     priya: { count: 0, comment: "Innocent AF", emoji: "😇" },
-    rahul: { count: 100, comment: "Legendary status achieved", emoji: "🔥" }
+    priyanshu: { count: 0, comment: "Innocent AF", emoji: "🔥" },
+    diksha: { count: 0, comment: "Quiet but wild energy", emoji: "🌶️" },
+    nigam: { count: 0, comment: "Low-key legend", emoji: "🧢" },
+    munni: { count: 0, comment: "Too pure for this world", emoji: "🕊️" },
+    lalit: { count: 0, comment: "Certified bro material", emoji: "🤝" },
+    chirag: { count: 0, comment: "Sleeper flirt", emoji: "😶‍🌫️" },
+    anjali: { count: 0, comment: "koi pasand nahi krta", emoji: "🍫" },
+    swati: { count: 0, comment: "Total softie", emoji: "🧸" },
+    sakshi: { count: 8, comment: "certified whore", emoji: "😇" },
+    varun: { count: 0, comment: "pron dekhta hai", emoji: "🧊" },
+    mangi: { count: 0, comment: "Vibe supplier", emoji: "📡" },
+    tushar: { count: 0, comment: "Not-so-innocent?", emoji: "😅" },
+    janhavi: { count: 2, comment: "galat rah par", emoji: "🌼" },
+    harsh: { count: 0, comment: "Silent but deadly", emoji: "💣" },
+    prajjwal: { count: 0, comment: "Golden retriever energy", emoji: "🐶" },
+    vedansh: { count: 0, comment: "looks maxing and voice maxing me lga h", emoji: "🌊" },
+    sudheer: { count: 0, comment: "kisi ke pyar me pagal", emoji: "🧥" },
+    abhinav: { count: 0, comment: "sutta aur mutthi par jeevit", emoji: "🧠" },
+    niranjan: { count: 0, comment: "khada nahi hota", emoji: "🕵️‍♂️" },
+    aditya: { count: 0, comment: "apni jat wali ke sath karega", emoji: "🧊" },
+    pratham: { count: 0, comment: "pure din mutthi", emoji: "🛡️" }
 };
 
-// Array of funny/flirty comments
+
 const comments = [
     { comment: "Certified Lover", emoji: "💘" },
     { comment: "Heart Breaker Alert", emoji: "💔" },
@@ -24,7 +43,7 @@ const comments = [
     { comment: "Stealing Hearts", emoji: "💖" }
 ];
 
-// DOM elements
+
 const nameForm = document.getElementById('nameForm');
 const nameInput = document.getElementById('nameInput');
 const resultContainer = document.getElementById('resultContainer');
@@ -33,11 +52,11 @@ const resultCount = document.getElementById('resultCount');
 const resultComment = document.getElementById('resultComment');
 const tryAgainBtn = document.getElementById('tryAgainBtn');
 
-// Generate body count function
+
 function generateBodyCount(inputName) {
     const normalizedName = inputName.toLowerCase().trim();
     
-    // Check for fixed responses
+    
     if (fixedResponses[normalizedName]) {
         const fixed = fixedResponses[normalizedName];
         return {
@@ -49,17 +68,17 @@ function generateBodyCount(inputName) {
     }
 
     // Generate random count and comment for other names
-    const count = Math.floor(Math.random() * 101);
+    const count = Math.floor(Math.random() * 10);
     let selectedComment = comments[Math.floor(Math.random() * comments.length)];
     
     // Adjust comment based on count ranges
     if (count === 0) {
         selectedComment = { comment: "Innocent AF", emoji: "😇" };
-    } else if (count >= 80) {
+    } else if (count >= 8) {
         selectedComment = { comment: "Legendary Status", emoji: "🔥" };
-    } else if (count >= 50) {
+    } else if (count >= 5) {
         selectedComment = { comment: "Certified Lover", emoji: "💘" };
-    } else if (count >= 20) {
+    } else if (count >= 2) {
         selectedComment = { comment: "Smooth Operator", emoji: "😎" };
     }
 
