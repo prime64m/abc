@@ -1,0 +1,279 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, hsl(330, 70%, 15%) 0%, hsl(340, 65%, 25%) 50%, hsl(320, 75%, 35%) 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Container */
+.min-h-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-weight: 900;
+    color: hsl(330, 85%, 70%);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px hsl(330, 85%, 70%), 0 0 40px hsl(330, 85%, 70%);
+    animation: heartPulse 2s ease-in-out infinite;
+}
+
+.subtitle {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    color: hsl(340, 80%, 75%);
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: hsl(330, 40%, 80%);
+}
+
+/* Card */
+.card-romantic {
+    background: linear-gradient(135deg, hsl(330, 60%, 95%) 0%, hsl(340, 50%, 92%) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(330, 40%, 85%);
+    box-shadow: 
+        0 20px 40px -10px hsl(330, 70%, 30%),
+        0 0 60px hsl(330, 85%, 70%),
+        inset 0 1px 0 hsl(330, 50%, 95%);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Form */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: hsl(330, 50%, 25%);
+}
+
+.name-input {
+    height: 3.5rem;
+    font-size: 1.125rem;
+    border-radius: 1rem;
+    border: 2px solid hsl(330, 40%, 70%);
+    background: hsl(330, 30%, 98%);
+    padding: 0 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.name-input:focus {
+    border-color: hsl(330, 70%, 50%);
+    box-shadow: 0 0 0 3px hsl(330, 70%, 50%, 0.1);
+}
+
+.name-input.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Buttons */
+.btn-romantic, .btn-romantic-secondary {
+    height: 3.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-romantic {
+    background: linear-gradient(135deg, hsl(330, 70%, 50%) 0%, hsl(340, 75%, 60%) 100%);
+    color: white;
+    box-shadow: 0 10px 30px -10px hsl(330, 70%, 30%);
+}
+
+.btn-romantic:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px -10px hsl(330, 70%, 30%);
+}
+
+.btn-romantic-secondary {
+    background: linear-gradient(135deg, hsl(330, 40%, 85%) 0%, hsl(340, 35%, 80%) 100%);
+    color: hsl(330, 50%, 25%);
+    border: 2px solid hsl(330, 40%, 70%);
+}
+
+.btn-romantic-secondary:hover {
+    background: linear-gradient(135deg, hsl(330, 45%, 80%) 0%, hsl(340, 40%, 75%) 100%);
+    transform: translateY(-1px);
+}
+
+/* Result Display */
+.result-container {
+    text-align: center;
+}
+
+.result-container.hidden {
+    display: none;
+}
+
+.result-container.bounce-in {
+    animation: bounceIn 0.6s ease-out;
+}
+
+.result-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.result-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: hsl(330, 40%, 50%);
+    margin-bottom: 0.5rem;
+}
+
+.count-display {
+    position: relative;
+}
+
+.count-number {
+    font-size: clamp(5rem, 12vw, 6rem);
+    font-weight: 900;
+    color: hsl(330, 70%, 50%);
+    text-shadow: 0 0 20px hsl(330, 85%, 70%);
+    animation: heartPulse 2s ease-in-out infinite;
+}
+
+.comment-section {
+    margin: 0.5rem 0;
+}
+
+.result-comment {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(340, 75%, 60%);
+}
+
+.button-section {
+    padding-top: 1rem;
+}
+
+/* Disclaimer */
+.disclaimer {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.disclaimer p {
+    font-size: 0.875rem;
+    color: hsl(330, 40%, 80%);
+    font-style: italic;
+}
+
+/* Floating Hearts */
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    animation: heartPulse 2s ease-in-out infinite;
+    opacity: 0.3;
+}
+
+.heart-1 { top: 10%; left: 10%; font-size: 2.5rem; color: hsl(330, 70%, 50%); }
+.heart-2 { top: 32%; right: 16%; font-size: 1.875rem; color: hsl(340, 75%, 60%); animation-delay: 0.5s; }
+.heart-3 { bottom: 24%; left: 8%; font-size: 1.5rem; color: hsl(330, 70%, 50%); animation-delay: 1s; }
+.heart-4 { bottom: 40%; right: 12%; font-size: 1.875rem; color: hsl(340, 75%, 60%); animation-delay: 1.5s; }
+.heart-5 { top: 50%; left: 4%; font-size: 1.5rem; color: hsl(330, 70%, 50%); animation-delay: 2s; }
+.heart-6 { top: 33%; right: 6%; font-size: 1.5rem; color: hsl(340, 75%, 60%); animation-delay: 2.5s; }
+
+/* Animations */
+@keyframes heartPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(0.9);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        max-width: 32rem;
+    }
+    
+    .card-romantic {
+        padding: 2.5rem;
+    }
+    
+    .header {
+        margin-bottom: 2.5rem;
+    }
+}

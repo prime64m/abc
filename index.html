@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Count Detector</title>
+    <meta name="description" content="Fun Body Count Detector">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="min-h-screen">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="title">Body Count</h1>
+                <h2 class="subtitle">Detector 💕</h2>
+                <p class="description">Find out your romantic score! 😉</p>
+            </div>
+
+            <!-- Main Card -->
+            <div class="card-romantic" id="mainCard">
+                <!-- Input Form -->
+                <form id="nameForm" class="form-container">
+                    <div class="input-group">
+                        <label for="nameInput" class="input-label">Enter your name ✨</label>
+                        <input 
+                            id="nameInput" 
+                            type="text" 
+                            placeholder="Your name here..." 
+                            class="name-input"
+                        />
+                    </div>
+                    <button type="submit" class="btn-romantic">
+                        Detect My Body Count 💘
+                    </button>
+                </form>
+
+                <!-- Result Display -->
+                <div id="resultContainer" class="result-container hidden">
+                    <div class="result-content">
+                        <h3 id="resultName" class="result-name"></h3>
+                        
+                        <div class="count-display">
+                            <span id="resultCount" class="count-number"></span>
+                        </div>
+                        
+                        <div class="comment-section">
+                            <p id="resultComment" class="result-comment"></p>
+                        </div>
+                        
+                        <div class="button-section">
+                            <button id="tryAgainBtn" class="btn-romantic-secondary">
+                                Try another name 💌
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="disclaimer">
+                <p>Just for fun – don't take it seriously! 😂</p>
+            </div>
+
+            <!-- Floating Hearts -->
+            <div class="floating-hearts">
+                <div class="heart heart-1">💕</div>
+                <div class="heart heart-2">💖</div>
+                <div class="heart heart-3">💘</div>
+                <div class="heart heart-4">❤️</div>
+                <div class="heart heart-5">💗</div>
+                <div class="heart heart-6">💓</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
